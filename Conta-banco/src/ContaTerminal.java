@@ -25,9 +25,15 @@ public class ContaTerminal {
 
         double saldo = 400.00;
 
-        if (String.valueOf(agencia).length() < 3 || String.valueOf(agencia).length() >= 5) System.out.println("Agência inválida.");
+        if (String.valueOf(agencia).length() < 3 || String.valueOf(agencia).length() >= 5) {
+            System.out.println("Agência inválida.");
+            return;
+        }
 
-        if (conta.length() != 5) System.out.println("Conta inválida.");
+        if (conta.length() != 5) {
+            System.out.println("Conta inválida.");
+            return;
+        }
 
         System.out.printf("Olá, %s! Muitas boas vindas ao Santander! Esses são os dados da sua conta:\nAgência: %s\nConta: %s \nSaldo disponível para saque: R$ %.2f", nome, agencia, conta, saldo);
 
